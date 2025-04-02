@@ -10,7 +10,8 @@
     "web": "DARK_MODE=media expo start --web",
     "test": "jest --watchAll",
     "lint": "expo lint",
-    "dev-android": "eas build --platform android --profile development"
+    "dev-android": "eas build --platform android --profile development",
+    "build-android": "eas build --platform android"
   },
   "jest": {
     "preset": "jest-expo"
