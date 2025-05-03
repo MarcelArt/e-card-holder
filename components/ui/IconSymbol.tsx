@@ -15,6 +15,7 @@ const MAPPING = {
   'chevron.right': 'chevron-right',
   'add': 'add',
   'add-box': 'add-box',
+  'date-range': 'date-range',
 } as Partial<
   Record<
     import('expo-symbols').SymbolViewProps['name'],

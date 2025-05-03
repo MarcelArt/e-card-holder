@@ -4,9 +4,11 @@ import { Box } from '@/components/ui/box';
 import { Fab, FabIcon, FabLabel } from '@/components/ui/fab';
 import { Heading } from '@/components/ui/heading';
 import { VStack } from '@/components/ui/vstack';
+import { useRouter } from 'expo-router';
 import { FlatList } from 'react-native';
 
 export default function ProfilesView() {
+	const router = useRouter();
 	const datas = [
 		{
 			id: 'abc',
@@ -24,7 +26,14 @@ export default function ProfilesView() {
 				<Heading size="3xl">Pilih profil</Heading>
 				<FlatList data={datas} renderItem={({ item }) => <ProfileComponent id={item.id} name={item.name} />} />
 			</VStack>
-			<Fab size="md" placement="bottom right" isHovered={false} isDisabled={false} isPressed={false}>
+			<Fab
+				size="md"
+				placement="bottom right"
+				isHovered={false}
+				isDisabled={false}
+				isPressed={false}
+				onPress={() => router.navigate('/create-profile')}
+			>
 				<FabIcon as={AddIcon({ color: 'white', icon: 'add', size: 28 })} />
 			</Fab>
 		</Box>
